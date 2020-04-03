@@ -1,17 +1,35 @@
 <html>
 
 <head>
-  <title>Bunny</title>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Bunny</title>
 </head>
 
 <body>
-  <button type="button" class="up-btn">jump</button>
-  <button type="button" class="back-btn">return</button>
-  <p>
-    <img id="bunny" src="https://i.pinimg.com/originals/c0/49/ba/c049bae650a9f00b4dfb380ada55898e.png" alt="bunny">
-    <img id="carrot" src="https://i.pinimg.com/originals/8f/bc/87/8fbc875efda126b4f8a20937489774f5.png">
-  </p>
+    <button type="button" class="up-btn">jump</button>
+    <button type="button" class="back-btn">return</button>
+    <p>
+        <img id="bunny" src="https://i.pinimg.com/originals/c0/49/ba/c049bae650a9f00b4dfb380ada55898e.png" alt="bunny">
+        <img id="carrot" src="https://i.pinimg.com/originals/8f/bc/87/8fbc875efda126b4f8a20937489774f5.png">
+    </p>
 </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".up-btn").click(function() {
+            $("#bunny").animate({
+                top: "-=70px"
+            }, 2000);
+        });
+
+        $(".back-btn").click(function() {
+            $("#bunny").animate({
+                top: "150"
+            }, "fast");
+        });
+    });
+
+</script>
 
 </html>
