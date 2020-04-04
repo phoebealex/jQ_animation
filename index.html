@@ -30,6 +30,14 @@
         });
     });
 
+    $(document).keydown(function(key) {
+        if (key.keyCode == 13) {
+            $("#carrot").animate({
+                width: "toggle";
+            })
+        }
+    });
+
 </script>
 
 </html>
